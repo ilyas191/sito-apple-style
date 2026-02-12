@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: white;
+    color: #111;
+}
+
+/* NAVBAR */
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: black;
+}
+
+/* SEZIONI */
+
+section {
+    padding: 120px 20px;
+    text-align: center;
+}
+
+/* HERO */
+
+.hero {
+    margin-top: 100px;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    max-width: 900px;
+    margin: 0 auto 30px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.hero-buttons a {
+    margin: 10px;
+}
+
+.btn-primary {
+    background: black;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #333;
+}
+
+.btn-secondary {
+    border: 1px solid black;
+    color: black;
+    padding: 14px 32px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: black;
+    color: white;
+}
+
+/* NUMERI */
+
+.numeri {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    background: white;
+}
+
+.numero h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.numero p {
+    color: #666;
+}
+
+/* SERVIZI */
+
+.servizi {
+    background: #fafafa;
+}
+
+.servizi h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    font-weight: 600;
+}
+
+.servizi .card {
+    background: white;
+    padding: 50px 30px;
+    margin: 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.servizi .card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.servizi .card p {
+    color: #666;
+}
+
+.servizi .card:hover {
+    transform: translateY(-10px);
+}
+
+/* PORTFOLIO */
+
+.portfolio h2 {
+    margin-bottom: 40px;
+}
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio-item {
+    background: #111;
+    color: white;
+    padding: 60px 40px;
+    margin: 15px;
+    border-radius: 12px;
+    transition: 0.3s;
+    min-width: 250px;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+/* TESTIMONIANZE */
+
+.testimonianze {
