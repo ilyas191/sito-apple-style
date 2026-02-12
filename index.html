@@ -1,314 +1,109 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ristorante Da Marco</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #111;
-    background: white;
-}
-
-/* NAVBAR */
-.navbar {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    padding: 20px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(255,255,255,0.8);
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
-    z-index: 1000;
-}
-
-.navbar.scrolled {
-    background: rgba(255,255,255,0.95);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-.logo {
-    font-weight: 600;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 25px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #111;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: #c0392b;
-}
-
-/* SEZIONI */
-section {
-    padding: 120px 20px;
-    text-align: center;
-}
-
-.hero {
-    margin-top: 100px;
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fafafa;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    max-width: 800px;
-    margin: 0 auto 20px;
-}
-
-.hero p {
-    color: #666;
-    margin-bottom: 40px;
-}
-
-/* BOTTONI */
-.btn-primary {
-    background: #111;
-    color: white;
-    padding: 14px 30px;
-    border-radius: 40px;
-    text-decoration: none;
-    margin: 10px;
-    transition: 0.3s;
-}
-
-.btn-primary:hover {
-    background: #333;
-}
-
-.btn-secondary {
-    border: 1px solid #111;
-    color: #111;
-    padding: 14px 30px;
-    border-radius: 40px;
-    text-decoration: none;
-    margin: 10px;
-    transition: 0.3s;
-}
-
-.btn-secondary:hover {
-    background: #111;
-    color: white;
-}
-
-/* CARD MENU */
-.menu-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 20px;
-    width: 300px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: 0.4s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 15px;
-    margin-bottom: 15px;
-}
-
-/* NUMERI */
-.numeri {
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    background: #fafafa;
-}
-
-.numero h2 {
-    font-size: 2.5rem;
-}
-
-/* GALLERIA */
-.galleria-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.galleria-container img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 15px;
-    transition: 0.4s;
-}
-
-.galleria-container img:hover {
-    transform: scale(1.05);
-}
-
-/* CONTATTI */
-.contatti p {
-    margin: 10px 0;
-}
-
-/* FOOTER */
-.footer {
-    padding: 40px;
-    background: #111;
-    color: white;
-    font-size: 0.9rem;
-}
-
-/* ANIMAZIONE */
-.fade-in {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: 0.8s;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* MOBILE */
-@media(max-width:768px){
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .numeri {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .navbar {
-        padding: 20px;
-    }
-}
-
-</style>
+    <meta charset="UTF-8">
+    <title>Creazione Siti Web Professionali</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav class="navbar">
-    <div class="logo">Ristorante Da Marco</div>
+    <div class="logo">IL Web Studio</div>
     <ul class="nav-links">
         <li><a href="#">Home</a></li>
-        <li><a href="#menu">Menù</a></li>
+        <li><a href="#servizi">Servizi</a></li>
         <li><a href="#contatti">Contatti</a></li>
     </ul>
 </nav>
 
-<section class="hero">
-    <div>
-        <h1>Il gusto autentico nel cuore di [Nome Città]</h1>
-        <p>Cucina tradizionale italiana, ingredienti freschi e atmosfera familiare.</p>
-        <a href="https://wa.me/39TUONUMERO" class="btn-primary">Prenota su WhatsApp</a>
-        <a href="#menu" class="btn-secondary">Scopri il menù</a>
-    </div>
-</section>
-
-<section id="menu" class="fade-in">
-    <h2>I nostri piatti</h2>
-    <div class="menu-container">
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d" alt="">
-            <h3>🍝 Pasta fresca</h3>
-            <p>Fatta in casa ogni giorno secondo la tradizione.</p>
+<section class="hero fade-in">
+    <div class="hero-content">
+        <h1>Costruiamo esperienze digitali che fanno crescere il tuo business.</h1>
+        <p>Siti web veloci, moderni e progettati per convertire.</p>
+        <div class="hero-buttons">
+            <a href="#contatti" class="btn-primary">Inizia un progetto</a>
+            <a href="#servizi" class="btn-secondary">Scopri di più</a>
         </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65" alt="">
-            <h3>🍕 Pizza forno a legna</h3>
-            <p>Impasto a lunga lievitazione e ingredienti selezionati.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="">
-            <h3>🥩 Secondi di qualità</h3>
-            <p>Carni scelte e piatti tipici locali.</p>
-        </div>
-
     </div>
 </section>
 
 <section class="numeri fade-in">
     <div class="numero">
-        <h2>20+</h2>
-        <p>Anni di esperienza</p>
-    </div>
-    <div class="numero">
-        <h2>5000+</h2>
-        <p>Clienti soddisfatti</p>
+        <h2>25+</h2>
+        <p>Progetti completati</p>
     </div>
     <div class="numero">
         <h2>100%</h2>
-        <p>Ingredienti freschi</p>
+        <p>Clienti soddisfatti</p>
+    </div>
+    <div class="numero">
+        <h2>48h</h2>
+        <p>Tempo medio consegna</p>
     </div>
 </section>
 
-<section class="fade-in">
-    <h2>Il nostro ambiente</h2>
-    <div class="galleria-container">
-        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5" alt="">
-        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de" alt="">
-        <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c" alt="">
+<section id="servizi" class="servizi fade-in">
+    <h2>I miei servizi</h2>
+
+    <div class="card">
+        <h3>Siti Web Vetrina</h3>
+        <p>Siti professionali per presentare la tua attività online.</p>
+    </div>
+
+    <div class="card">
+        <h3>Landing Page</h3>
+        <p>Pagine ottimizzate per trasformare visitatori in clienti.</p>
+    </div>
+
+    <div class="card">
+        <h3>Restyling Siti</h3>
+        <p>Rinnovo completo del tuo sito per renderlo moderno e veloce.</p>
+    </div>
+</section>
+
+<section class="perche fade-in">
+    <h2>Perché scegliere me?</h2>
+    <p>Siti veloci, design moderno e supporto diretto. Nessuna agenzia, parli direttamente con chi crea il tuo sito.</p>
+</section>
+
+<section class="portfolio fade-in">
+    <h2>Progetti recenti</h2>
+    <div class="portfolio-container">
+        <div class="portfolio-item">Sito per Ristorante</div>
+        <div class="portfolio-item">Landing per Personal Trainer</div>
+        <div class="portfolio-item">Sito per Studio Dentistico</div>
+    </div>
+</section>
+
+<section class="testimonianze fade-in">
+    <h2>Cosa dicono i clienti</h2>
+    <div class="testimonianze-container">
+        <div class="testimonianza">
+            <p>"Il sito ha aumentato le richieste del mio ristorante in poche settimane."</p>
+            <strong>- Marco, Ristoratore</strong>
+        </div>
+        <div class="testimonianza">
+            <p>"Professionale e veloce. Consigliatissimo."</p>
+            <strong>- Laura, Personal Trainer</strong>
+        </div>
     </div>
 </section>
 
 <section id="contatti" class="contatti fade-in">
     <h2>Contatti</h2>
-    <p>📍 Via Roma 10, [Nome Città]</p>
-    <p>📞 333 123 4567</p>
+    <p>Scrivimi su WhatsApp o via email per un preventivo gratuito.</p>
 </section>
 
 <footer class="footer">
-    © 2026 Ristorante Da Marco - Tutti i diritti riservati.
+    <p>© 2026 IL Web Studio. Tutti i diritti riservati.</p>
 </footer>
 
 <script>
 const sections = document.querySelectorAll('.fade-in');
+
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if(entry.isIntersecting){
@@ -316,11 +111,9 @@ const observer = new IntersectionObserver(entries => {
         }
     });
 });
-sections.forEach(section => observer.observe(section));
 
-window.addEventListener("scroll", function() {
-    const navbar = document.querySelector(".navbar");
-    navbar.classList.toggle("scrolled", window.scrollY > 50);
+sections.forEach(section => {
+    observer.observe(section);
 });
 </script>
 
